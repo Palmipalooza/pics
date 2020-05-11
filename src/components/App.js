@@ -4,15 +4,23 @@ import SearchBar from './SearchBar';
 import accessKey from '../config';
 
 class App extends Component {
-  onSearchSubmit(term) {
-    axios.get('https://api.unsplash.com/search/photos', {
-      params: {
-        query: term,
-      },
-      headers: {
-        Authorization: `Client-ID ${accessKey}`,
-      },
-    });
+  async onSearchSubmit(term) {
+    try {
+      const response = await axios.get(
+        'https://api.unsplash.com/search/photos',
+        {
+          params: {
+            query: term,
+          },
+          headers: {
+            Authorization: `Client-ID ${accessKey}`,
+          },
+        }
+      );
+      console.log(response.data.results);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
