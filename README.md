@@ -1,7 +1,7 @@
-Simple Application that shows pictures from the Unsplash api
+Renders list of images from search bar
 
-Features a search bar that connects with external api and renders images with CSS Grid
+React :: Unsplash Image API :: Semantic ui :: CSS Grid
 
-In the project directory, run:
+Fork :: Clone :: Run
 
 ### `npm start`
